@@ -4,21 +4,49 @@
 }
 
 nav {
+    width: 100%;
     display: flex;
+    align-items: center;
+    gap: 30px;
+    height: 50px;
     justify-content: space-around;
-}
 
+}
+      
 .right ul li {
     list-style: none;
-    display: flex;
-    justify-content: center;
+    position: relative;
     cursor: pointer;
+    color: #0c0c0b;;
+    font-size: 19px;
+    padding: 0.5rem 1rem;
+    transition: color 0.25s;
+
+}
+.right ul li::after{
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-color: rgb(237 243 16);
+    scale:  1 0;
+    z-index: -1;
+    transition: 0.45s;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+.right ul li:hover{
+    color: white;
+}
+.right ul li:hover::after{
+    scale: 1 1;
 }
 
 .right ul {
     display: flex;
     gap: 52px;
+
 }
+
 
 .first {
     display: flex;
@@ -88,20 +116,22 @@ nav {
     font-weight: 600;
     color: #606060;
     text-shadow: 0 1px #fff;
-  }
-  .green:hover {
+}
+
+.green:hover {
     box-shadow: 0 4px 3px 1px #0f0f0f, 0 6px 8px #111111, 0 -4px 4px #141414, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
-  }
-  
-  .green:active {
+}
+
+.green:active {
     box-shadow: 0 4px 3px 1px #111010, 0 6px 8px #0d0d0e, 0 -4px 4px #050505, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
-  }
-  button:focus {
+}
+
+button:focus {
     box-shadow: 0 4px 3px 1px #0f0f0f, 0 6px 8px #050505, 0 -4px 4px #0e0f0f, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
-  }
-  
-  
-  
+}
+
+
+
 .item {
     padding: 23px;
     background-color: #f9f9f9;
@@ -109,7 +139,7 @@ nav {
     font-size: 20px;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   
+
 }
 
 .item-lang {
@@ -226,15 +256,17 @@ h3 {
     transition: 0.5s;
     transition-property: box-shadow;
 }
-.box button{
-    background: rgb(0,140,255);
-    box-shadow: 0 0 25px rgb(0,140,255);
+
+.box button {
+    background: rgb(0, 140, 255);
+    box-shadow: 0 0 25px rgb(0, 140, 255);
 }
+
 .box button:hover {
-    box-shadow: 0 0 5px rgb(0,140,255),
-              0 0 25px rgb(0,140,255),
-              0 0 50px rgb(0,140,255),
-              0 0 100px rgb(0,140,255);
+    box-shadow: 0 0 5px rgb(0, 140, 255),
+        0 0 25px rgb(0, 140, 255),
+        0 0 50px rgb(0, 140, 255),
+        0 0 100px rgb(0, 140, 255);
 }
 
 .info div {
